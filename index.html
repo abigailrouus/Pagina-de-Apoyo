@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Apoyo Académico - CBTIS 131</title>
+    <link rel="stylesheet" href="estilos.proyec.css">
+</head>
+
+<body>
+    <header>
+        <div class="encabezado">
+        <img src="logo.png" alt="Logo CBTIS 131" class="logo">
+        <h1>Página de Apoyo Académico - CBTIS 131</h1>
+        <p>Encuentra apuntes, resúmenes, videos y enlaces útiles para tus estudios.</p>
+    </div>
+    </header>
+
+    <nav>
+        <input type="text" id="buscador" placeholder="Buscar materia...">
+        <ul>
+            <li><a href="matematicas.html">Matemáticas</a></li>
+            <li><a href="fisica.html">Física</a></li>
+            <li><a href="programacion.html">Programación</a></li>
+            <li><a href="ingles.html">Inglés</a></li>
+            <li><a href="etica.html">Ética</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="tarjetas">
+            <div class="tarjeta">
+                <h3>Matemáticas</h3>
+                <p>Apuntes, ejercicios y videos explicativos de álgebra, cálculo y trigonometría.</p>
+                <a href="matematicas.html">Ver más</a>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Física</h3>
+                <p>Conceptos básicos, fórmulas y videos sobre movimiento, energía y fuerzas.</p>
+                <a href="fisica.html">Ver más</a>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Programación</h3>
+                <p>Guías sobre HTML, CSS, JavaScript y bases de datos para principiantes.</p>
+                <a href="programacion.html">Ver más</a>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Inglés</h3>
+                <p>Gramática, tiempos verbales, vocabulario y ejercicios prácticos.</p>
+                <a href="ingles.html">Ver más</a>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Ética</h3>
+                <p>Reflexiones, valores y ejemplos sobre la toma de decisiones responsables.</p>
+                <a href="etica.html">Ver más</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 CBTIS 131 - Sitio de apoyo académico creado por estudiantes.</p>
+    </footer>
+
+    <script>
+        const buscador = document.getElementById('buscador');
+        buscador.addEventListener('keyup', () => {
+            const filtro = buscador.value.toLowerCase();
+            const tarjetas = document.querySelectorAll('.tarjeta');
+            tarjetas.forEach(tarjeta => {
+                const texto = tarjeta.textContent.toLowerCase();
+                tarjeta.style.display = texto.includes(filtro) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
